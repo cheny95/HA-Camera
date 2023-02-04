@@ -1,0 +1,73 @@
+type: vertical-stack
+cards:
+  - type: custom:webrtc-camera
+    url: rtsp://admin:@10.10.10.37:554/stream2
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        color_type: blank-card
+      - type: custom:button-card
+        icon: mdi:arrow-up-bold
+        color: rgb(30,144,255)
+        aspect_ratio: 1/0.8
+        styles:
+          card:
+            - '--mdc-ripple-color': blue
+            - '--mdc-ripple-press-opacity': 0.5
+        tap_action:
+          action: call-service
+          service: script.turn_up
+      - type: custom:button-card
+        color_type: blank-card
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        icon: mdi:arrow-left-bold
+        color: rgb(30,144,255)
+        aspect_ratio: 1/0.8
+        styles:
+          card:
+            - '--mdc-ripple-color': blue
+            - '--mdc-ripple-press-opacity': 0.5
+        tap_action:
+          action: call-service
+          service: script.turn_left
+      - type: custom:button-card
+        icon: mdi:home
+        color: rgb(255,165,0)
+        aspect_ratio: 1/0.8
+        styles:
+          card:
+            - '--mdc-ripple-color': green
+            - '--mdc-ripple-press-opacity': 0.5
+        tap_action:
+          action: call-service
+          service: script.turn_home
+      - type: custom:button-card
+        icon: mdi:arrow-right-bold
+        color: rgb(30,144,255)
+        aspect_ratio: 1/0.8
+        styles:
+          card:
+            - '--mdc-ripple-color': blue
+            - '--mdc-ripple-press-opacity': 0.5
+        tap_action:
+          action: call-service
+          service: script.turn_right
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        color_type: blank-card
+      - type: custom:button-card
+        icon: mdi:arrow-down-bold
+        color: rgb(30,144,255)
+        aspect_ratio: 1/0.8
+        styles:
+          card:
+            - '--mdc-ripple-color': blue
+            - '--mdc-ripple-press-opacity': 0.5
+        tap_action:
+          action: call-service
+          service: script.turn_down
+      - type: custom:button-card
+        color_type: blank-card
